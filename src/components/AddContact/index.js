@@ -21,7 +21,7 @@ const AddContact = ({ onClose }) => {
     return (
         <Modal show={true} onHide={onClose}>
             <Modal.Header closeButton>
-                <Modal.Title>New Contact</Modal.Title>
+                <Modal.Title>Add New Product</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <form>
