@@ -1,14 +1,14 @@
 import React from "react";
 
-const ContactList = React.lazy(() => import("pages/ContactList"));
+const ProductList = React.lazy(() => import("pages/ProductList"));
 
 const routes = [
   
   {
     enabled: true,
     path: "/",
-    component: ContactList,
-    navbar: "Contact List App",
+    component: ProductList,
+    navbar: "Product List App",
     child: null,
   },
 ];

@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { useDispatch } from "react-redux";
 import { createContact } from "actions/contacts";
 
-const AddContact = ({ onClose }) => {
+const AddProduct = ({ onClose }) => {
     const dispatch = useDispatch();
 
     const [inputs, setInputs] = useState({ name: "", phone: "", category: "" });
@@ -12,7 +12,7 @@ const AddContact = ({ onClose }) => {
     const updateFormValue = ({ target: { name, value } }) =>
         setInputs(inputObj => ({ ...inputObj, [name]: value }));
 
-    const addContact = () => {
+    const addProduct = () => {
         console.log(inputs);
         dispatch(createContact({ ...inputs }));
         onClose();
@@ -61,12 +61,12 @@ const AddContact = ({ onClose }) => {
                 <Button variant="secondary" onClick={onClose}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={addContact}>
-                    Add Contact
+                <Button variant="primary" onClick={addProduct}>
+                    Add Product
                 </Button>
             </Modal.Footer>
         </Modal>
     );
 };
 
-export default AddContact;
+export default AddProduct;

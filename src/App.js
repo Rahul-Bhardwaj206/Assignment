@@ -7,7 +7,7 @@ import "./dark.css";
 import Layout from "pages/_layouts/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import routes from "routes";
-import ContactList from "pages/ContactList";
+import ProductList from "pages/ProductList";
 
 function App() {
     return (
@@ -24,7 +24,7 @@ function App() {
                         ))}
 
                         <Route path="/" exact>
-                            <ContactList />
+                            <ProductList />
                         </Route>
                     </Switch>
                 </Suspense>

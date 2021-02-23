@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { updateContact, deleteContact } from "actions/contacts";
 import { useDispatch } from "react-redux";
 
-const ContactCard = ({ name, phone, category, index }) => {
+const ProductCard = ({ name, phone, category, index }) => {
     const dispatch = useDispatch();
     const [editMode, setEditMode] = useState(false);
     const [inputs, setInputs] = useState({ name, phone, category });
@@ -12,12 +12,12 @@ const ContactCard = ({ name, phone, category, index }) => {
 
     const toggleEditMode = () => setEditMode((mode) => !mode);
 
-    const updateContactData = () => {
+    const updateProductData = () => {
         dispatch(updateContact({ ...inputs }, index));
         toggleEditMode();
     };
 
-    const deleteContactFromList = () => {
+    const deleteProductFromList = () => {
         dispatch(deleteContact(index));
     };
 
@@ -84,7 +84,7 @@ const ContactCard = ({ name, phone, category, index }) => {
                                         <button
                                             type="button"
                                             className="btn btn-outline-danger"
-                                            onClick={deleteContactFromList}
+                                            onClick={deleteProductFromList}
                                         >
                                             <i className="fas fa-trash mr-2"></i>
                                             Delete
@@ -97,7 +97,7 @@ const ContactCard = ({ name, phone, category, index }) => {
                                         <button
                                             type="button"
                                             className="btn btn-outline-success  mr-2"
-                                            onClick={updateContactData}
+                                            onClick={updateProductData}
                                         >
                                             <i className="fas fa-save mr-2"></i>
                                             Save
@@ -121,4 +121,4 @@ const ContactCard = ({ name, phone, category, index }) => {
     );
 };
 
-export default ContactCard;
+export default ProductCard;

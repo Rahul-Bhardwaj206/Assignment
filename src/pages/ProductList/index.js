@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import Header from "components/Header";
-import AddContact from "components/AddContact";
-import ContactCard from "components/ContactCard";
+import AddContact from "components/AddProduct";
+import ContactCard from "components/ProductCard";
 
 import { useSelector } from "react-redux";
 
-const ContactList = () => {
+const ProductList = () => {
     const contacts = useSelector(state => state.contacts.list);
 
     const [contactFormVisiblity, setContactFormVisiblity] = useState(false);
 
-    const toggleContactFormVisiblity = () =>
+    const toggleProductFormVisiblity = () =>
         setContactFormVisiblity(visiblity => !visiblity);
 
     return (
@@ -26,7 +26,7 @@ const ContactList = () => {
                                 <h4 className="d-inline">Product List</h4>
                                 <span
                                     className="float-right mt-1 cursor-pointer"
-                                    onClick={toggleContactFormVisiblity}
+                                    onClick={toggleProductFormVisiblity}
                                 >
                                     <i className="fas fa-plus"></i>
                                 </span>
@@ -44,7 +44,7 @@ const ContactList = () => {
                         </div>
                     </div>
                     {contactFormVisiblity && (
-                        <AddContact onClose={toggleContactFormVisiblity} />
+                        <AddContact onClose={toggleProductFormVisiblity} />
                     )}
                 </div>
             </div>
@@ -52,4 +52,4 @@ const ContactList = () => {
     );
 };
 
-export default ContactList;
+export default ProductList;
