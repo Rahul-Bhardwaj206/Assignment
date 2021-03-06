@@ -3,10 +3,12 @@ import Header from "components/Header";
 import AddContact from "components/AddProduct";
 import ContactCard from "components/ProductCard";
 
+
 import { useSelector } from "react-redux";
 
 const ProductList = () => {
     const contacts = useSelector(state => state.contacts.list);
+
 
     const [contactFormVisiblity, setContactFormVisiblity] = useState(false);
 

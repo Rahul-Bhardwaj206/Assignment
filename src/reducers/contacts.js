@@ -9,14 +9,14 @@ export default function contacts(state = initialState, action) {
         case actionTypes.CREATE_CONTACT:
             return {
                 ...state,
-                list: [...state.list, { ...action.contact }]
+                list: [...state.list, { ...action.product }]
             };
 
         case actionTypes.UPDATE_CONTACT:
             return {
                 ...state,
                 list: state.list.map((contact, index) =>
-                    index === action.index ? { ...action.contact } : contact
+                    index === action.index ? { ...action.product } : contact
                 )
             };
 
@@ -24,7 +24,7 @@ export default function contacts(state = initialState, action) {
             return {
                 ...state,
                 list: state.list.filter(
-                    (contact, index) => index !== action.index
+                    (product, index) => index !== action.index
                 )
             };
 

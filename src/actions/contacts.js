@@ -4,15 +4,15 @@ export const actionTypes = {
     DELETE_CONTACT: "Contact/delete"
 };
 
-export function createContact(contact) {
+export function createContact(product) {
     return dispatch => {
-        return dispatch({ type: actionTypes.CREATE_CONTACT, contact });
+        return dispatch({ type: actionTypes.CREATE_CONTACT, product });
     };
 }
 
-export function updateContact(contact, index) {
+export function updateContact(product, index) {
     return dispatch => {
-        return dispatch({ type: actionTypes.UPDATE_CONTACT, contact, index });
+        return dispatch({ type: actionTypes.UPDATE_CONTACT, product, index });
     };
 }
 
